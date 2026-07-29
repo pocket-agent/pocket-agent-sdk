@@ -22,4 +22,11 @@ describe('@pocket-agent/sdk', () => {
     expect(connectionProfileLabel('all-local')).toBe('Local');
     expect(connectionProfileLabel('custom')).toBe('Custom');
   });
+
+  it('resolves auth mode from profile', async () => {
+    const { resolveAuthMode } = await import('../auth.js');
+    expect(resolveAuthMode('all-local', 'local', 'local')).toBe('none');
+    expect(resolveAuthMode('all-local', 'remote', 'local')).toBe('google');
+    expect(resolveAuthMode('cloud-only', 'local', 'local')).toBe('google');
+  });
 });

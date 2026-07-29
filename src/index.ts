@@ -12,6 +12,16 @@ export type {
 export { SERVICE_IDS } from "./api.js";
 
 export {
+  AUTH_MODES,
+  LOCAL_DEV_USER,
+  LOCAL_DEV_USER_ID,
+  isAuthMode,
+  resolveAuthMode,
+} from "./auth.js";
+
+export type { AuthMode } from "./auth.js";
+
+export {
   CONNECTION_PROFILES,
   connectionProfileLabel,
   isConnectionProfile,

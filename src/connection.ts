@@ -1,5 +1,7 @@
 /** Workspace connection profiles — config/user-setup.yaml */
 
+import type { AuthMode } from "./auth.js";
+
 export const CONNECTION_PROFILES = [
   "all-local",
   "hosted-ui-home-agent",
@@ -33,8 +35,11 @@ export interface UserSetup {
   routing?: { llm?: LlmRouting };
   tunnel?: { enabled?: boolean; public_url?: string; provider?: string };
   google_oauth?: { client_id?: string };
+  auth?: { mode?: AuthMode };
   ui?: { primary?: UiPrimary };
 }
+
+export type { AuthMode } from "./auth.js";
 
 export function isConnectionProfile(value: string): value is ConnectionProfile {
   return (CONNECTION_PROFILES as readonly string[]).includes(value);

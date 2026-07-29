@@ -31,6 +31,12 @@
         "client_id": { "type": "string" }
       }
     },
+    "auth": {
+      "type": "object",
+      "properties": {
+        "mode": { "type": "string", "enum": ["none", "google"] }
+      }
+    },
     "ui": {
       "type": "object",
       "properties": {

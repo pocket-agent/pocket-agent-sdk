@@ -10,6 +10,7 @@ ConnectionProfile = Literal["all-local", "hosted-ui-home-agent", "cloud-only"]
 ModuleMode = Literal["local", "remote"]
 LlmRouting = Literal["pocket_node", "cloud_relay"]
 UiPrimary = Literal["web", "desktop"]
+AuthMode = Literal["none", "google"]
 
 
 class ApiSuccessResponse(BaseModel):
@@ -75,6 +76,7 @@ class UserSetup(BaseModel):
     routing: dict[str, LlmRouting] | None = None
     tunnel: dict[str, Any] | None = None
     google_oauth: dict[str, str] | None = None
+    auth: dict[str, AuthMode] | None = None
     ui: dict[str, UiPrimary] | None = None
 
 
