@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "daily"
     # assignees:
-    #   - pocket-agent
+    #   - xarlizard
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -23,7 +23,7 @@ updates:
     schedule:
       interval: "weekly"
     # assignees:
-    #   - pocket-agent
+    #   - xarlizard
     commit-message:
       prefix: "ci"
       include: "scope"

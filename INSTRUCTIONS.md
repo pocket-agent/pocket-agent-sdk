@@ -8,6 +8,18 @@ Guide for maintainers and coding agents working on **pocket-agent/pocket-agent-s
 
 Shared types and schemas only — no runtime servers or UI.
 
+## Consumption (workspace)
+
+| Repo | Import |
+|------|--------|
+| `pocket-agent-web-app` | `@pocket-agent/sdk` |
+| `pocket-agent-api-app` | `@pocket-agent/sdk` |
+| `pocket-agent-cli` | `@pocket-agent/sdk` |
+| `pocket-agent-wizard` | `@pocket-agent/sdk` |
+| `pocket-agent` | `pip install -e python/` → `pocket_agent_sdk` |
+
+Build TypeScript before other installs: `npm run check`.
+
 ## When to change this repo
 
 - API response shapes change in `pocket-agent-api-app` or `pocket-agent` HTTP routes

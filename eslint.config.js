@@ -11,8 +11,6 @@ export default tseslint.config(
       'examples/**',
       'python/**',
       'schemas/**',
-      // One-time init wizard; removed from adopter repos after `npm run init`
-      'scripts/lib/template-init/**',
     ],
   },
   eslint.configs.recommended,

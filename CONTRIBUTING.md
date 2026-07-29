@@ -2,6 +2,8 @@
 
 Thanks for contributing to **pocket-agent-sdk**.
 
+Repository scaffolding was bootstrapped from [@open-templates](https://github.com/open-templates) GitHub templates.
+
 ## Setup
 
 ```bash
@@ -12,7 +14,8 @@ cd pocket-agent-sdk
 ## Pull requests
 
 1. Branch from `main`.
-2. Open a PR using the repository template.
+2. Keep changes focused; update [CHANGELOG.md](CHANGELOG.md) for user-visible changes.
+3. Run `npm run check` before opening a PR.
 
 ## License
 

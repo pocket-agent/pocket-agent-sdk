@@ -6,7 +6,7 @@ Contact [@pocket-agent](https://github.com/pocket-agent) or use GitHub Security 
 
 ## Scope
 
-This policy covers **pocket-agent-sdk** once you add application code.
+This policy covers **pocket-agent-sdk** — shared types, schemas, and Python models for the Pocket Agent ecosystem.
 
 ---
 

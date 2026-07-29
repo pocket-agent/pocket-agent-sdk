@@ -1,10 +1,16 @@
 # @pocket-agent/sdk
 
-[![npm version](https://badge.fury.io/js/@pocket-agent/sdk.svg)](https://badge.fury.io/js/@pocket-agent/sdk)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CI/CD](https://github.com/pocket-agent/pocket-agent-sdk/actions/workflows/publish.yml/badge.svg)](https://github.com/pocket-agent/pocket-agent-sdk/actions/workflows/publish.yml)
+Shared **TypeScript types**, **JSON schemas**, and **Python models** for the open-source **[Pocket Agent](https://github.com/pocket-agent)** ecosystem · **v0.1.0**
 
-Shared **TypeScript types**, **JSON schemas**, and **Python Pydantic models** for Pocket Agent services.
+Single source of truth — all services import from here; do not duplicate contracts locally.
+
+## What's included (0.1.0)
+
+| Layer | Contents |
+|-------|----------|
+| TypeScript | `ConnectionProfile`, `UserSetup`, `ApiResponse`, `SERVICE_IDS`, helpers |
+| JSON Schema | API envelopes, health/status, `user-setup.yaml` |
+| Python | `pocket_agent_sdk` — Pydantic models, `CONNECTION_PROFILES` |
 
 ## Install
 
@@ -15,46 +21,34 @@ npm install @pocket-agent/sdk
 Workspace sibling:
 
 ```json
-"dependencies": {
-  "@pocket-agent/sdk": "file:../pocket-agent-sdk"
-}
-```
-
-## Contents
-
-| Path | Purpose |
-|------|---------|
-| `src/` | TypeScript types (`@pocket-agent/sdk`) |
-| `schemas/` | JSON Schema contracts (health, status, user-setup) |
-| `python/` | `pocket_agent_sdk` (`pip install -e python`) |
-
-## Usage
-
-```typescript
-import type { ApiResponse, PocketNodeStatusData, UserSetup } from '@pocket-agent/sdk';
+"dependencies": { "@pocket-agent/sdk": "file:../pocket-agent-sdk" }
 ```
 
 ```bash
 cd python && pip install -e .
 ```
 
-```python
-from pocket_agent_sdk import PocketNodeStatusData, UserSetup
+## Usage
+
+```typescript
+import type { ApiResponse, UserSetup } from '@pocket-agent/sdk';
+import { SERVICE_IDS, CONNECTION_PROFILES } from '@pocket-agent/sdk';
 ```
 
-## Schemas
+```python
+from pocket_agent_sdk import CONNECTION_PROFILES, SERVICE_IDS, UserSetup
+```
 
-- `api-success-response.json` / `api-error-response.json` — API worker envelope
-- `pocket-node-health.json` / `pocket-node-status.json` — Pocket Node
-- `api-worker-status.json` — combined worker status
-- `user-setup.json` — `config/user-setup.yaml` shape
+## Build
 
-## Workspace
+```bash
+npm install && npm run check
+```
 
-In the org folder this repo lives at `pocket-agent-sdk/` next to `pocket-agent/`, `pocket-agent-web-app/`, etc. See [../docs/WORKSPACE_LAYOUT.md](../docs/WORKSPACE_LAYOUT.md).
+Spec: [../specs/features/10-shared-contracts.md](../specs/features/10-shared-contracts.md)
 
-## License
+## Docs
 
-MIT — see [LICENSE](LICENSE).
+[INSTRUCTIONS.md](INSTRUCTIONS.md) · [CHANGELOG.md](CHANGELOG.md)
 
 Maintained by [pocket-agent](https://github.com/pocket-agent).

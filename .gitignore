@@ -1,6 +1,3 @@
-# pocket-agent/pocket-agent-sdk — @open-templates global gitignore
-# Personalized on init from specs/shared/templates/gitignore
-
 # Dependencies
 node_modules/
 .pnp

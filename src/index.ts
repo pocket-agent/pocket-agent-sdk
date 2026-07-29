@@ -11,6 +11,12 @@ export type {
 
 export { SERVICE_IDS } from "./api.js";
 
+export {
+  CONNECTION_PROFILES,
+  connectionProfileLabel,
+  isConnectionProfile,
+} from "./connection.js";
+
 export type {
   ConnectionProfile,
   LlmRouting,
@@ -18,4 +24,5 @@ export type {
   ModuleMode,
   UiPrimary,
   UserSetup,
+  WebConnectionProfile,
 } from "./connection.js";

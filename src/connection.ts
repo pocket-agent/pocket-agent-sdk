@@ -1,9 +1,15 @@
 /** Workspace connection profiles — config/user-setup.yaml */
 
-export type ConnectionProfile =
-  | "all-local"
-  | "hosted-ui-home-agent"
-  | "cloud-only";
+export const CONNECTION_PROFILES = [
+  "all-local",
+  "hosted-ui-home-agent",
+  "cloud-only",
+] as const;
+
+export type ConnectionProfile = (typeof CONNECTION_PROFILES)[number];
+
+/** Web UI may show "custom" when VITE_CONNECTION_PROFILE is unset or invalid. */
+export type WebConnectionProfile = ConnectionProfile | "custom";
 
 export type ModuleMode = "local" | "remote";
 
@@ -28,4 +34,21 @@ export interface UserSetup {
   tunnel?: { enabled?: boolean; public_url?: string; provider?: string };
   google_oauth?: { client_id?: string };
   ui?: { primary?: UiPrimary };
+}
+
+export function isConnectionProfile(value: string): value is ConnectionProfile {
+  return (CONNECTION_PROFILES as readonly string[]).includes(value);
+}
+
+export function connectionProfileLabel(profile: WebConnectionProfile): string {
+  switch (profile) {
+    case "all-local":
+      return "Local";
+    case "hosted-ui-home-agent":
+      return "Hosted + home agent";
+    case "cloud-only":
+      return "Cloud";
+    default:
+      return "Custom";
+  }
 }

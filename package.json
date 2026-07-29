@@ -66,11 +66,11 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=24.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "@types/node": "^22.15.0",
+    "@types/node": "^24.0.0",
     "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.39.2",
     "globals": "^16.5.0",
