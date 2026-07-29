@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pocket-agent.dev/schemas/api-success-response.json",
+  "title": "ApiSuccessResponse",
+  "type": "object",
+  "required": ["success", "data"],
+  "additionalProperties": false,
+  "properties": {
+    "success": { "const": true },
+    "data": { "type": "object" }
+  }
+}

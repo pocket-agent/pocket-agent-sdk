@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pocket-agent.dev/schemas/api-error-response.json",
+  "title": "ApiErrorResponse",
+  "type": "object",
+  "required": ["success", "error"],
+  "additionalProperties": false,
+  "properties": {
+    "success": { "const": false },
+    "error": {
+      "type": "object",
+      "required": ["message"],
+      "properties": {
+        "message": { "type": "string" },
+        "code": { "type": "string" },
+        "details": { "type": "object" }
+      }
+    }
+  }
+}

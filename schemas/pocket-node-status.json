@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pocket-agent.dev/schemas/pocket-node-status.json",
+  "title": "PocketNodeStatusData",
+  "type": "object",
+  "required": [
+    "agent",
+    "llm_providers",
+    "memory_count",
+    "knowledge_chunks",
+    "embeddings",
+    "nas_root",
+    "telegram_configured"
+  ],
+  "properties": {
+    "agent": { "type": "string" },
+    "llm_providers": { "type": "array", "items": { "type": "string" } },
+    "memory_count": { "type": "integer", "minimum": 0 },
+    "knowledge_chunks": { "type": "integer", "minimum": 0 },
+    "embeddings": { "type": "boolean" },
+    "nas_root": { "type": "string" },
+    "telegram_configured": { "type": "boolean" }
+  }
+}

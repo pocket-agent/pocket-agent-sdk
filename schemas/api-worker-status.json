@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pocket-agent.dev/schemas/api-worker-status.json",
+  "title": "ApiWorkerStatusData",
+  "type": "object",
+  "required": [
+    "service",
+    "environment",
+    "pocket_node_url",
+    "pocket_node_online",
+    "pocket_node_error",
+    "pocket_node",
+    "timestamp"
+  ],
+  "properties": {
+    "service": { "type": "string" },
+    "environment": { "type": "string" },
+    "pocket_node_url": { "type": "string", "format": "uri" },
+    "pocket_node_online": { "type": "boolean" },
+    "pocket_node_error": { "type": ["string", "null"] },
+    "pocket_node": { "type": ["object", "null"] },
+    "timestamp": { "type": "string", "format": "date-time" }
+  }
+}

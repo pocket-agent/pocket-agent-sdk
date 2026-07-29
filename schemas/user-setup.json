@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pocket-agent.dev/schemas/user-setup.json",
+  "title": "UserSetup",
+  "type": "object",
+  "properties": {
+    "profile": {
+      "type": "string",
+      "enum": ["all-local", "hosted-ui-home-agent", "cloud-only"]
+    },
+    "web": { "$ref": "#/$defs/moduleEndpoint" },
+    "api": { "$ref": "#/$defs/moduleEndpoint" },
+    "agent": { "$ref": "#/$defs/moduleEndpoint" },
+    "routing": {
+      "type": "object",
+      "properties": {
+        "llm": { "type": "string", "enum": ["pocket_node", "cloud_relay"] }
+      }
+    },
+    "tunnel": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "public_url": { "type": "string" },
+        "provider": { "type": "string" }
+      }
+    },
+    "google_oauth": {
+      "type": "object",
+      "properties": {
+        "client_id": { "type": "string" }
+      }
+    },
+    "ui": {
+      "type": "object",
+      "properties": {
+        "primary": { "type": "string", "enum": ["web", "desktop"] }
+      }
+    }
+  },
+  "$defs": {
+    "moduleEndpoint": {
+      "type": "object",
+      "properties": {
+        "mode": { "type": "string", "enum": ["local", "remote"] },
+        "url": { "type": "string" },
+        "deploy": { "type": "string" },
+        "stack": { "type": "string" },
+        "command": { "type": "string" }
+      }
+    }
+  }
+}

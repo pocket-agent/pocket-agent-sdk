@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pocket-agent.dev/schemas/pocket-node-health.json",
+  "title": "PocketNodeHealthData",
+  "type": "object",
+  "required": ["status", "timestamp", "service"],
+  "properties": {
+    "status": { "const": "ok" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "service": { "type": "string", "const": "pocket-agent" }
+  }
+}

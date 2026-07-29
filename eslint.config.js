@@ -9,6 +9,8 @@ export default tseslint.config(
       'coverage/**',
       'node_modules/**',
       'examples/**',
+      'python/**',
+      'schemas/**',
       // One-time init wizard; removed from adopter repos after `npm run init`
       'scripts/lib/template-init/**',
     ],
