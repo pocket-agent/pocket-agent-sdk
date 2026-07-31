@@ -1,11 +1,11 @@
 <img src=".github/pocket-agent-image.png" width="200" alt="Pocket Agent" align="left"/>
 
 <div>
-<h3>@pocket-agent/sdk</h3>
+<h3>pocket-agent-sdk</h3>
 <p>
 Shared <strong>TypeScript types</strong>, <strong>JSON schemas</strong>, and <strong>Python models</strong> for the Pocket Agent ecosystem. Single source of truth — import here; do not duplicate contracts in app repos.
 </p>
-<a href="https://www.npmjs.com/package/@pocket-agent/sdk"><img src="https://img.shields.io/badge/npm-%40pocket-agent%2Fsdk-007ec6?style=flat-square" width="175" alt="npm package"/></a>
+<a href="https://www.npmjs.com/package/pocket-agent-sdk"><img src="https://img.shields.io/badge/npm-pocket-agent-sdk-007ec6?style=flat-square" width="175" alt="npm package"/></a>
 </div>
 
 <br/><br/>
@@ -14,7 +14,7 @@ Shared <strong>TypeScript types</strong>, <strong>JSON schemas</strong>, and <st
 
 [![Release](https://img.shields.io/github/v/release/pocket-agent/pocket-agent-sdk)](https://github.com/pocket-agent/pocket-agent-sdk/releases)
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/pocket-agent/pocket-agent-sdk/blob/main/LICENSE)
-[![npm](https://img.shields.io/npm/v/@pocket-agent/sdk)](https://www.npmjs.com/package/@pocket-agent/sdk)
+[![npm](https://img.shields.io/npm/v/pocket-agent-sdk)](https://www.npmjs.com/package/pocket-agent-sdk)
 [![CI](https://github.com/pocket-agent/pocket-agent-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/pocket-agent/pocket-agent-sdk/actions/workflows/ci.yml)
 
 <br/>
@@ -42,13 +42,13 @@ Shared <strong>TypeScript types</strong>, <strong>JSON schemas</strong>, and <st
 ## Install
 
 ```bash
-npm install @pocket-agent/sdk
+npm install pocket-agent-sdk
 ```
 
 Workspace sibling:
 
 ```json
-"dependencies": { "@pocket-agent/sdk": "file:../pocket-agent-sdk" }
+"dependencies": { "pocket-agent-sdk": "file:../pocket-agent-sdk" }
 ```
 
 ```bash
@@ -58,8 +58,8 @@ cd python && pip install -e .
 ## Quick start
 
 ```typescript
-import type { ApiResponse, UserSetup } from '@pocket-agent/sdk';
-import { SERVICE_IDS, CONNECTION_PROFILES } from '@pocket-agent/sdk';
+import type { ApiResponse, UserSetup } from 'pocket-agent-sdk';
+import { SERVICE_IDS, CONNECTION_PROFILES } from 'pocket-agent-sdk';
 ```
 
 ```python
@@ -94,4 +94,4 @@ To report a vulnerability, see [SECURITY.md](SECURITY.md).
 
 ## License
 
-@pocket-agent/sdk is released under the [MIT License](LICENSE).
+pocket-agent-sdk is released under the [MIT License](LICENSE).

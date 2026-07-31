@@ -1,4 +1,4 @@
-"""Pocket Agent shared types — Python mirror of @pocket-agent/sdk."""
+"""Pocket Agent shared types — Python mirror of pocket-agent-sdk (npm)."""
 
 from pocket_agent_sdk.auth import (
     AUTH_MODES,

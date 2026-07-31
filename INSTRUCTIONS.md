@@ -12,10 +12,10 @@ Shared types and schemas only — no runtime servers or UI.
 
 | Repo | Import |
 |------|--------|
-| `pocket-agent-web-app` | `@pocket-agent/sdk` |
-| `pocket-agent-api-app` | `@pocket-agent/sdk` |
-| `pocket-agent-cli` | `@pocket-agent/sdk` |
-| `pocket-agent-wizard` | `@pocket-agent/sdk` |
+| `pocket-agent-web-app` | `pocket-agent-sdk` |
+| `pocket-agent-api-app` | `pocket-agent-sdk` |
+| `pocket-agent-cli` | `pocket-agent-sdk` |
+| `pocket-agent-wizard` | `pocket-agent-sdk` |
 | `pocket-agent` | `pip install -e python/` → `pocket_agent_sdk` |
 
 Build TypeScript before other installs: `npm run check`.
@@ -36,7 +36,7 @@ Build TypeScript before other installs: `npm run check`.
 ## Source layout
 
 ```
-src/           # @pocket-agent/sdk (tsup → dist/)
+src/           # pocket-agent-sdk (tsup → dist/)
 schemas/       # JSON Schema
 python/        # pocket_agent_sdk (pip install -e python)
 ```

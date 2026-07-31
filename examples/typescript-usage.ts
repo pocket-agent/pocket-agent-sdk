@@ -1,4 +1,4 @@
-// Example: using @pocket-agent/sdk types
+// Example: using pocket-agent-sdk types
 import {
   CONNECTION_PROFILES,
   SERVICE_IDS,
@@ -6,7 +6,7 @@ import {
   isConnectionProfile,
   type ApiResponse,
   type UserSetup,
-} from '@pocket-agent/sdk';
+} from 'pocket-agent-sdk';
 
 const setup: UserSetup = {
   profile: 'all-local',

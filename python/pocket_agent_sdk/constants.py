@@ -1,4 +1,4 @@
-"""Shared constants — mirror @pocket-agent/sdk."""
+"""Shared constants — mirror pocket-agent-sdk."""
 
 CONNECTION_PROFILES: tuple[str, ...] = (
     "all-local",

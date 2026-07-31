@@ -6,7 +6,7 @@ import {
   isConnectionProfile,
 } from '../index.js';
 
-describe('@pocket-agent/sdk', () => {
+describe('pocket-agent-sdk', () => {
   it('exports canonical service identifiers', () => {
     expect(SERVICE_IDS.pocketNode).toBe('pocket-agent');
     expect(SERVICE_IDS.apiWorker).toBe('pocket-agent-api');
